@@ -6,11 +6,18 @@ import Markers from './Markers';
 //     {text}
 //   </div>
 // );
-  const mockData = [{
+  const mockData = [
+  {
     id: '1',
-    lat: "36.1216611" ,
+    lat: "36.1216611",
     lng: "-115.1679618"
-  }]
+  },
+  {
+    id: '2',
+    lat: "36.1175",
+    lng: "-115.1882"
+  }
+]
 
 
 class SimpleMap extends Component {
@@ -23,15 +30,6 @@ class SimpleMap extends Component {
   };
   componentDidMount() {
 
-  }
-
-  _onChildClick = (key, childProps) => {
-    console.log('childprops,', childProps)
-    const markerId = childProps.marker.get('id');
-    const index = this.props.markers.findIndex(m => m.get('id') === markerId);
-    if (this.props.onChildClick) {
-      this.props.onChildClick(index);
-    }
   }
 
   render() {
