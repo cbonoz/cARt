@@ -28,10 +28,13 @@ class ConsumerView extends Component {
         const self = this
         const { currentIndex } = self.state
         getItems().then(res => {
-            const items = res.data
+            const items = res.data.reverse() // reverse order from addition
             console.log(items)
             const numItems = items.length
             self.setState({ items })
+            if (!currentIndex) {
+                self.renderData(0)
+            }
             // self.renderData((currentIndex + 1) % numItems)
         }).catch(err => {
             console.error('error', err)
@@ -96,7 +99,7 @@ class ConsumerView extends Component {
                         <ListGroup>
                             <ListGroupItem header="Your Recent Items" bsStyle='info'/>
                             <ListGroupItem>
-                            {!items && <p>No recent items Recorded</p>}
+                            {items === null || (items.length === 0) && <h3>No recent items Recorded,<br/>Why not go out and explore?</h3>}
                             {items && items.map((item, i) => {
                                 const cName = cx({ 'gray': currentIndex === i, 'list-item-row': true })
                                 return <div
@@ -114,6 +117,7 @@ class ConsumerView extends Component {
                             <ListGroupItem header={"Your account after buying " + currentItem.name}>One month simulation</ListGroupItem>
                             <ListGroupItem>
                             <div className='chart-area'>
+                                {/* <p>{currentItem.name}</p> */}
                                 {itemData && <AreaChart
                                     label="Predicted Balance"
                                     colors={[chartColor]}
