@@ -1,0 +1,879 @@
+{
+    "account": [
+        {
+            "CONTAINER": "bank",
+            "id": 11895599,
+            "recurringEvents": [
+                {
+                    "id": 10006971,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Verizon",
+                        "simple": "VERIZON*RECURRING PAY"
+                    },
+                    "amount": {
+                        "amount": 143.77,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 143.77,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 143.77,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-29",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 15,
+                    "category": "Cable/Satellite Services",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-29",
+                    "nextTransactionId": 10008338,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "RECURRING_SUBSCRIPTION_PAYMENT",
+                    "type": "PAYMENT",
+                    "merchant": {
+                        "id": "verizon",
+                        "name": "Verizon",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Cable/Satellite/Telecom",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006973,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Envestnet Direct Deposit/Salary",
+                        "simple": "ENVESTNET FIN PAYROLLPPD ID: xxxxxx2327"
+                    },
+                    "amount": {
+                        "amount": 500,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 500,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 500,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-28",
+                    "baseType": "CREDIT",
+                    "categoryType": "INCOME",
+                    "categoryId": 29,
+                    "category": "Paychecks/Salary",
+                    "categorySource": "SYSTEM",
+                    "frequency": "SEMI_MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-28",
+                    "nextTransactionId": 10008352,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "DIRECT_DEPOSIT_SALARY",
+                    "type": "DEPOSITS_CREDITS",
+                    "merchant": {
+                        "id": "envestnet",
+                        "name": "Envestnet",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Salary/Regular Income",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006979,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Envestnet Direct Deposit/Salary",
+                        "simple": "ENVESTNET FIN PAYROLL ***********4192"
+                    },
+                    "amount": {
+                        "amount": 2500,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 2500,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 2500,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-27",
+                    "baseType": "CREDIT",
+                    "categoryType": "INCOME",
+                    "categoryId": 29,
+                    "category": "Paychecks/Salary",
+                    "categorySource": "SYSTEM",
+                    "frequency": "SEMI_MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-27",
+                    "nextTransactionId": 10008400,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "DIRECT_DEPOSIT_SALARY",
+                    "type": "DEPOSITS_CREDITS",
+                    "merchant": {
+                        "id": "envestnet",
+                        "name": "Envestnet",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Salary/Regular Income",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006985,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Citizens Bank",
+                        "simple": "IPHONE CITIZ*PMT 1 OF 24"
+                    },
+                    "amount": {
+                        "amount": 60.33,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 60.33,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 60.33,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-24",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 17,
+                    "category": "Loans",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-24",
+                    "nextTransactionId": 10008441,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "DEBIT",
+                    "type": "OTHER_WITHDRAWALS",
+                    "merchant": {
+                        "id": "citizensbank",
+                        "name": "Citizens Bank",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Services/Supplies",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006969,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Allstate Insurance Payment",
+                        "simple": "ALLSTATE *NJPAYM"
+                    },
+                    "amount": {
+                        "amount": 171.12,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 171.12,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 171.12,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-23",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 14,
+                    "category": "Insurance",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-23",
+                    "nextTransactionId": 10008331,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "INSURANCE_PAYMENT",
+                    "type": "PAYMENT",
+                    "merchant": {
+                        "id": "allstate",
+                        "name": "Allstate",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Insurance",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006972,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Citizens Bank",
+                        "simple": "IPHONE CITIZ*PMT 15 OF 24"
+                    },
+                    "amount": {
+                        "amount": 32.41,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 32.41,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 32.41,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-16",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 17,
+                    "category": "Loans",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-16",
+                    "nextTransactionId": 10008345,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "DEBIT",
+                    "type": "OTHER_WITHDRAWALS",
+                    "merchant": {
+                        "id": "citizensbank",
+                        "name": "Citizens Bank",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Services/Supplies",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006970,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Six Flags NJ",
+                        "simple": "SIX FLAGS GREAT ADVENTUR xxx-xxx-2000 NJ"
+                    },
+                    "amount": {
+                        "amount": 75.68,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 75.68,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 75.68,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-15",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 7,
+                    "category": "Entertainment",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-15",
+                    "confidenceLevel": "LOW",
+                    "confidence": 51.34,
+                    "subType": "RECURRING_SUBSCRIPTION_PAYMENT",
+                    "type": "PAYMENT",
+                    "merchant": {
+                        "id": "sixflagsnjus",
+                        "name": "Six Flags",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Entertainment/Recreation",
+                        "address": {
+                            "state": "NJ",
+                            "country": "US"
+                        },
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006974,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "PSE&G Utilities Payment",
+                        "simple": "PSEG ONLINE PMT ***********3POS"
+                    },
+                    "amount": {
+                        "amount": 212.93,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 193.28,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 212.93,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 4,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-14",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 39,
+                    "category": "Utilities",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-14",
+                    "nextTransactionId": 10008365,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "UTILITIES_PAYMENT",
+                    "type": "PAYMENT",
+                    "merchant": {
+                        "id": "pse&g",
+                        "name": "PSE&G",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Utilities",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006968,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Quicken Loans Home Loan/Mortgage",
+                        "simple": "QUICKEN LOANS ONLINE PMT ***********3POS"
+                    },
+                    "amount": {
+                        "amount": 1363.45,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 1363.45,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 1363.45,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-14",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 18,
+                    "category": "Mortgages",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-14",
+                    "nextTransactionId": 10008324,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "HOME_LOAN_MORTGAGE",
+                    "type": "PAYMENT",
+                    "merchant": {
+                        "id": "quickenloans",
+                        "name": "Quicken Loans",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Mortgage",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006975,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Bright House Networks",
+                        "simple": "BRIGHT HOUSE NETWORKS"
+                    },
+                    "amount": {
+                        "amount": 61.8,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 61.8,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 61.8,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-13",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 15,
+                    "category": "Cable/Satellite Services",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-13",
+                    "nextTransactionId": 10008372,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "RECURRING_SUBSCRIPTION_PAYMENT",
+                    "type": "PAYMENT",
+                    "merchant": {
+                        "id": "brighthousenetworksus",
+                        "name": "Bright House Networks",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Other Income",
+                        "address": {
+                            "country": "US"
+                        },
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006976,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Citizens Bank",
+                        "simple": "IPHONE CITIZ*PMT 7 OF 24"
+                    },
+                    "amount": {
+                        "amount": 39.5,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 39.5,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 39.5,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-12",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 17,
+                    "category": "Loans",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-12",
+                    "nextTransactionId": 10008379,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "DEBIT",
+                    "type": "OTHER_WITHDRAWALS",
+                    "merchant": {
+                        "id": "citizensbank",
+                        "name": "Citizens Bank",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Services/Supplies",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006983,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Citizens Bank",
+                        "simple": "IPHONE CITIZ*PMT 7 OF 24"
+                    },
+                    "amount": {
+                        "amount": 45.75,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 45.75,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 45.75,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-12",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 17,
+                    "category": "Loans",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-12",
+                    "nextTransactionId": 10008434,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "DEBIT",
+                    "type": "OTHER_WITHDRAWALS",
+                    "merchant": {
+                        "id": "citizensbank",
+                        "name": "Citizens Bank",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Services/Supplies",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006978,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Netflix",
+                        "simple": "Netflix.com"
+                    },
+                    "amount": {
+                        "amount": 11.72,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 11.72,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 11.72,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-10",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 7,
+                    "category": "Entertainment",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-10",
+                    "nextTransactionId": 10008393,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "RECURRING_SUBSCRIPTION_PAYMENT",
+                    "type": "PAYMENT",
+                    "merchant": {
+                        "id": "netflix",
+                        "name": "Netflix",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Entertainment/Recreation",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006980,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "DIRECTV",
+                        "simple": "DTV*DIRECTV SERVICE"
+                    },
+                    "amount": {
+                        "amount": 242.16,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 239.16,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 242.16,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0.08,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-09",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 15,
+                    "category": "Cable/Satellite Services",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-09",
+                    "nextTransactionId": 10008413,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "RECURRING_SUBSCRIPTION_PAYMENT",
+                    "type": "PAYMENT",
+                    "merchant": {
+                        "id": "directv",
+                        "name": "DirecTV",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Cable/Satellite/Telecom",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006982,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Sprint",
+                        "simple": "SPRINT *WIRELESS"
+                    },
+                    "amount": {
+                        "amount": 251.36,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 266.04,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 251.36,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 1.62,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-09",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 15,
+                    "category": "Cable/Satellite Services",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-09",
+                    "nextTransactionId": 10008427,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "RECURRING_SUBSCRIPTION_PAYMENT",
+                    "type": "PAYMENT",
+                    "merchant": {
+                        "id": "sprint",
+                        "name": "Sprint",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Cable/Satellite/Telecom",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006984,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "GoPro",
+                        "simple": "GOPRO PLUS"
+                    },
+                    "amount": {
+                        "amount": 4.99,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 4.99,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 4.99,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-09",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 16,
+                    "category": "Online Services",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-09",
+                    "confidenceLevel": "LOW",
+                    "confidence": 51.34,
+                    "subType": "DEBIT",
+                    "type": "OTHER_WITHDRAWALS",
+                    "merchant": {
+                        "id": "gopro",
+                        "name": "Gopro",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Services/Supplies",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006981,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Verizon Wireless",
+                        "simple": "VERIZON WRL MY ACCT VE"
+                    },
+                    "amount": {
+                        "amount": 50.08,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 50.08,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 50.08,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-06",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 15,
+                    "category": "Cable/Satellite Services",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-06",
+                    "nextTransactionId": 10008420,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "RECURRING_SUBSCRIPTION_PAYMENT",
+                    "type": "PAYMENT",
+                    "merchant": {
+                        "id": "verizonwireless",
+                        "name": "Verizon Wireless",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Cable/Satellite/Telecom",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                },
+                {
+                    "id": 10006977,
+                    "sourceType": "SYSTEM_PREDICTED",
+                    "description": {
+                        "consumer": "Citizens Bank",
+                        "simple": "IPHONE CITIZ*PMT 11 OF 24"
+                    },
+                    "amount": {
+                        "amount": 56.16,
+                        "currency": "USD"
+                    },
+                    "averageAmount": {
+                        "amount": 56.16,
+                        "currency": "USD"
+                    },
+                    "lastTransactionAmount": {
+                        "amount": 56.16,
+                        "currency": "USD"
+                    },
+                    "amountVariance": 0,
+                    "userApprovalStatus": "PENDING",
+                    "recurringEventStatus": "ACTIVE",
+                    "startDate": "2018-09-03",
+                    "baseType": "DEBIT",
+                    "categoryType": "EXPENSE",
+                    "categoryId": 17,
+                    "category": "Loans",
+                    "categorySource": "SYSTEM",
+                    "frequency": "MONTHLY",
+                    "createdDate": "2018-10-20",
+                    "lastUpdatedDate": "2018-10-20",
+                    "lastTransactionDate": "2018-09-03",
+                    "nextTransactionId": 10008386,
+                    "confidenceLevel": "HIGH",
+                    "confidence": 90,
+                    "subType": "DEBIT",
+                    "type": "OTHER_WITHDRAWALS",
+                    "merchant": {
+                        "id": "citizensbank",
+                        "name": "Citizens Bank",
+                        "source": "FACTUAL",
+                        "categoryLabel": "Services/Supplies",
+                        "coordinates": {
+                            "latitude": 0,
+                            "longitude": 0
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}

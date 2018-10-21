@@ -1,0 +1,18 @@
+{
+    "account": [
+        {
+            "CONTAINER": "bank",
+            "id": 11895599,
+            "isAsset": true,
+            "balances": [
+                {
+                    "date": "2018-10-20",
+                    "balance": {
+                        "amount": 2056.32,
+                        "currency": "USD"
+                    }
+                }
+            ]
+        }
+    ]
+}

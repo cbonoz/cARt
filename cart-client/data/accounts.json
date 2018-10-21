@@ -1,0 +1,46 @@
+{
+    "account": [
+        {
+            "interestRate": 10.98,
+            "annualPercentageYield": 9.98,
+            "includeInNetWorth": true,
+            "accountName": "Platinum Money Market",
+            "currentBalance": {
+                "amount": 2056.32,
+                "currency": "USD"
+            },
+            "accountType": "MONEY_MARKET",
+            "isManual": false,
+            "displayedName": "Jabba the Hutt",
+            "accountNumber": "xxxx9929",
+            "availableBalance": {
+                "amount": 2056.32,
+                "currency": "USD"
+            },
+            "accountStatus": "ACTIVE",
+            "lastUpdated": "2018-10-20T21:20:04Z",
+            "isAsset": true,
+            "createdDate": "2018-10-20T21:20:04Z",
+            "balance": {
+                "amount": 2056.32,
+                "currency": "USD"
+            },
+            "aggregationSource": "USER",
+            "providerId": "16441",
+            "providerAccountId": 11169417,
+            "CONTAINER": "bank",
+            "id": 11895599,
+            "userClassification": "PERSONAL",
+            "dataset": [
+                {
+                    "updateEligibility": "ALLOW_UPDATE",
+                    "lastUpdated": "2018-10-20T21:20:08Z",
+                    "additionalStatus": "AVAILABLE_DATA_RETRIEVED",
+                    "name": "BASIC_AGG_DATA",
+                    "lastUpdateAttempt": "2018-10-20T21:20:08Z"
+                }
+            ],
+            "providerName": "Dag Site"
+        }
+    ]
+}
