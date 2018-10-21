@@ -11,7 +11,7 @@ export default class LottieControl extends React.Component {
   }
 
   render() {
-    const { animationData, height, width, runOnce } = this.props
+    const { animationData, height, width, runOnce, text } = this.props
     const {isPaused, isStopped} = this.state
 
     const buttonStyle = {

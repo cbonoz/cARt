@@ -6,6 +6,9 @@
   "resources" : [
     {
       "filename" : "mrbear.arobject"
+    },
+    {
+      "filename" : "purse.arobject"
     }
   ]
 }

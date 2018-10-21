@@ -71,7 +71,8 @@ class SimpleMap extends Component {
             title={marker.name}
             id={marker.id}
             lat={marker.lat}
-            lng={marker.lng} />)}
+            lng={marker.lng}
+          />)}
         </GoogleMapReact>
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
