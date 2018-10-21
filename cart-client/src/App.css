@@ -1,9 +1,10 @@
 .App {
 }
 
-.App-logo {
+.App-logo.navbar-brand {
   /* animation: App-logo-spin infinite 20s linear; */
   /* height: 40px; */
+  padding: 0px !important;
 }
 
 /* .App-header {

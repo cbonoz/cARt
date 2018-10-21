@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import logo from './../assets/build_sage_icon.png'
 
 class LessonCard extends Component {
 
