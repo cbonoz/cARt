@@ -1,32 +1,138 @@
 .App {
-  text-align: center;
 }
 
 .App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+  /* animation: App-logo-spin infinite 20s linear; */
+  /* height: 40px; */
 }
 
-.App-header {
+/* .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
+} */
 
 .App-link {
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header-text-area {
+  margin-bottom: 35px;
+}
+
+.home-main-logo{
+  margin-top: 150px;
+  margin-bottom: 15px;
+  width: 300px;
+}
+
+
+.home-main-buttons {
+  margin-top: 50px;
+  padding: 20px;
+}
+
+.navbar-nav>li>a {
+  color: white !important;
+}
+
+.centered {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.navbar {
+  margin-bottom: 0px !important;
+}
+
+.form-area {
+  padding-top: 40px;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.home-area {
+  background: url('./assets/construction.png');
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover; 
+  min-height: 100vh;
+  text-align: center;
+}
+
+.nav-area {
+  color: white;
+  /* padding-top: 10px;
+  margin: 10px;
+  font-size: 18px; */
+}
+
+.nav-link {
+  color:white;
+}
+
+.nav-link:hover {
+  color: yellow;
+}
+
+.report-area {
+  max-width: 800px;
+}
+
+.search-result-area {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.search-area {
+  max-width: 800px;
+  text-align: center;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.search-form {
+  margin-bottom: 50px;
+}
+
+.search-button {
+  margin: 20px;
+  width: 200px;
+}
+
+.report-button {
+  width: 200px;
+}
+
+.react-rotating-text-cursor {
+  animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
+}
+
+.slogan-text {
+  font-weight: bolder;
+  padding-top: 80px;
+  font-size: 24px;
+}
+
+.search-form-field {
+  height: 60px;
+  font-weight: bold;
+  font-size: 28px;
+}
+
+@keyframes blinking-cursor {
+  0% {
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }

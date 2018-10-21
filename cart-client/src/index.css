@@ -12,3 +12,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.card-avatar {
+  float: left;
+  margin-right: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border: 1px solid black;
+}
+.card-title {
+  padding-top: 5px;
+  font-size: 20px
+}
+.card-meta {
+  font-size: 14px;
+  font-weight: bold;
+}
+.card-code {
+}
+
+.card-btn {
+  color: #555;
+  padding: 0;
+  border: 0;
+  margin-right: 20px;
+}
+
+.card-btn:hover {
+  color: #000;
+  background: transparent;
+}
