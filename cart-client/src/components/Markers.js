@@ -10,8 +10,6 @@ export default class Markers extends Component {
             animationData = { animationData }
             height = { 20 }
             width = { 20 }
-            lat = { 36.1216611 }
-            lng = { -115.1679618 }
             />
         )
     }

@@ -10,7 +10,7 @@ class ConsumerView extends Component {
         items: [],
         itemData: [],
         currentItem: null,
-        currentIndex: null 
+        currentIndex: null
     }
 
     constructor( props ){
@@ -20,10 +20,13 @@ class ConsumerView extends Component {
 
     renderItems() {
         const self = this
+        const { currentIndex } = self.state
         getItems().then(res => {
             const items = res.data
             console.log(items)
+            const numItems = items.length
             self.setState({ items })
+            self.renderData(currentIndex + 1)
         }).catch(err => {
             console.error('error', err)
         })
@@ -52,7 +55,7 @@ class ConsumerView extends Component {
 
     componentDidMount() {
         this.renderItems()
-        setInterval(this.renderItems, 10000)
+        setInterval(this.renderItems, 5000)
     }
 
     render() {
@@ -67,7 +70,7 @@ class ConsumerView extends Component {
                             <h2>Your Recent Items</h2>
                             {!items && <p>No recent items Recorded</p>}
                             {items && items.map((item, i) => {
-                                return <ListGroupItem 
+                                return <ListGroupItem
                                 className={{cx: {'gray': currentIndex === i, 'list-spacing': true}}}
                                 onClick={() => this.renderData(i)}
                                  key={i}>
