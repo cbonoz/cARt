@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Map from './Map'
 
 class MapView extends Component {
     render() {
         return (
             <div>
-                TODO: add react-google-maps
+                <Map/>
             </div>
         );
     }
