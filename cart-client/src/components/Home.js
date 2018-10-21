@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Slogan from './Slogan';
 import { Button } from 'react-bootstrap'
-import * as animationData from './lottie/man_pay.json'
+import animationData from './lottie/man_pay.json'
 
 // import logo from '../assets/cart_logo_trans.png'
 import LottieControl from './LottieControl';
