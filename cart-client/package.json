@@ -9,6 +9,7 @@
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.5.2",
+    "react-google-maps": "^9.4.5",
     "react-jsonschema-form": "^1.0.5",
     "react-lottie": "^1.2.3",
     "react-notifications": "^1.4.3",
