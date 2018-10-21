@@ -133,7 +133,7 @@ class ConsumerView extends Component {
                                 {hasNegative && <p className="ok-text" >You're <b>not ok</b> to buy this item based on your balance projection for the next month.</p>}
                                 {!hasNegative && <p className="ok-text" >You're <b>ok</b> to buy this item based on your balance projection for the next month.</p>}
 
-                                {hasNegative && <Button className="chart-button" bsSize="large" bsStyle="danger">Request Money</Button>}
+                                {hasNegative && <Button className="chart-button" bsSize="large" bsStyle="danger">Buy or Pool Money</Button>}
                                 {!hasNegative && <Button className="chart-button" bsSize="large" bsStyle="success">Buy</Button>}
                                 <Button className="chart-button" bsSize="large" bsStyle="info">Lookup Product</Button>
                             </div>

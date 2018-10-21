@@ -4,13 +4,11 @@ from faker import Faker
 fake = Faker()
 
 PRICES = list(map(lambda x: x - .01, [
-    25,
-    50,
     80,
     100,
-    250,
-    500,
-    900,
+    2500,
+    5000,
+    10000,
 ]))
 
 ITEMS = [
