@@ -16,7 +16,6 @@ import os
 import json
 import time
 
-APP_PORT = 9001
 
 from flask_socketio import SocketIO, emit
     
@@ -49,7 +48,8 @@ db.create_all()
 
 CORS(app)
 
-cart = Cart()
+cart = Cart(port = 9001)
+APP_PORT = cart.port
 # ns = NotificationService()
 
 socketio = SocketIO(app)

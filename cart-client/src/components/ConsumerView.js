@@ -13,9 +13,10 @@ class ConsumerView extends Component {
         currentIndex: null 
     }
 
-    constructor() {
-        this.renderItems = this.renderItems.bind(this)
-    }
+    constructor( props ){
+        super( props );
+        this.renderItems = this.renderItems.bind(this);
+      }
 
     renderItems() {
         const self = this
@@ -33,12 +34,13 @@ class ConsumerView extends Component {
         const currentItem = self.state.items[currentIndex]
         getFuture().then(res => {
             const itemData = res.data
+            const balances = itemData['account'][0]['balances']
             console.log(itemData)
-            const modifiedData = itemData.map(entry => {
+            const modifiedData = balances.map(entry => {
                 entry['balance']['amount'] = entry['balance']['amount']  - currentItem.price
                 return {
                     x: entry['date'],
-                    y: entry['balance']['amount']
+                    y: parseFloat(parseFloat(entry['balance']['amount']).toFixed(2))
                 }
             })
             console.log(modifiedData)
