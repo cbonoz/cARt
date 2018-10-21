@@ -10,7 +10,7 @@ class ConsumerView extends Component {
         items: [],
         itemData: [],
         currentItem: null,
-        currentIndex: null 
+        currentIndex: null
     }
 
     constructor() {
@@ -65,7 +65,7 @@ class ConsumerView extends Component {
                             <h2>Your Recent Items</h2>
                             {!items && <p>No recent items Recorded</p>}
                             {items && items.map((item, i) => {
-                                return <ListGroupItem 
+                                return <ListGroupItem
                                 className={{cx: {'gray': currentIndex === i, 'list-spacing': true}}}
                                 onClick={() => this.renderData(i)}
                                  key={i}>
