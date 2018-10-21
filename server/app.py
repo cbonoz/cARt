@@ -123,8 +123,17 @@ def ok_to_spend():
     except Exception as e:
         return jsonify({'error': e})
 
+@app.route('/payments', methods=['GET'])
+def get_payments():
+    try:
+        payments = cart.get_payments()
+        return jsonify(payments)
+    except Exception as e:
+        return jsonify({'error': e})   
+
+
 @app.route('/purchase', methods=['GET'])
-def record():
+def purchase():
     try:
         items = cart.get_items()
         return jsonify(items)

@@ -12,6 +12,10 @@ import ConsumerView from "./components/ConsumerView";
 import MerchantView from "./components/MerchantView";
 import GoogleMaps from "./components/GoogleMaps";
 
+import Chartkick from "chartkick";
+import Chart from "chart.js";
+
+Chartkick.addAdapter(Chart);
 
 class App extends Component {
   render() {

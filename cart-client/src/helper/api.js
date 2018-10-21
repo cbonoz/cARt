@@ -1,7 +1,7 @@
 const library = (function () {
     const axios = require('axios');
 
-    const BASE_URL = 'http://localhost:9001'
+    const BASE_URL = 'http://localhost:9002'
     // const BASE_URL = 'http://34.239.22.54:8080' // or your host.
 
     function getParsings(text) {
