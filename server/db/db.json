@@ -1,0 +1,74 @@
+{
+    "_default": {
+        "1": {
+            "name": "Hess PLC",
+            "address": "657 Murphy Locks Apt. 936\nClarkstad, KY 99950-8970",
+            "price": 10000,
+            "lat": 100,
+            "lng": 100
+        },
+        "2": {
+            "name": "Ferguson-Jenkins",
+            "address": "231 Rhonda Manor Suite 253\nNancyshire, MN 22872-7977",
+            "price": 500,
+            "lat": 100,
+            "lng": 100
+        },
+        "3": {
+            "name": "George, Zamora and Burgess",
+            "address": "69375 Stone Island\nNorth William, MO 22843",
+            "price": 100,
+            "lat": 100,
+            "lng": 100
+        },
+        "4": {
+            "name": "Stephens LLC",
+            "address": "18626 Tiffany Common\nPort Eric, NH 39732",
+            "price": 1000,
+            "lat": 100,
+            "lng": 100
+        },
+        "5": {
+            "name": "Lopez, Gross and Johnston",
+            "address": "04606 John Pass Apt. 958\nZacharyport, OK 39728",
+            "price": 5000,
+            "lat": 100,
+            "lng": 100
+        },
+        "6": {
+            "name": "Banks Group",
+            "address": "1931 Frank Way Suite 925\nNew Alexandria, NY 43485-9006",
+            "price": 500,
+            "lat": 100,
+            "lng": 100
+        },
+        "7": {
+            "name": "Kirk-Gaines",
+            "address": "54985 Sergio Wells\nJamesstad, VA 81695",
+            "price": 1000,
+            "lat": 100,
+            "lng": 100
+        },
+        "8": {
+            "name": "Davenport-Stephenson",
+            "address": "2154 Brian Streets Apt. 773\nJohnsonmouth, CO 95185-9721",
+            "price": 10000,
+            "lat": 100,
+            "lng": 100
+        },
+        "9": {
+            "name": "Perry-Stone",
+            "address": "79558 Jimenez Stravenue Suite 104\nLeeport, SC 77711-5309",
+            "price": 10000,
+            "lat": 100,
+            "lng": 100
+        },
+        "10": {
+            "name": "Booker LLC",
+            "address": "PSC 6477, Box 3377\nAPO AP 21392-0705",
+            "price": 5000,
+            "lat": 100,
+            "lng": 100
+        }
+    }
+}

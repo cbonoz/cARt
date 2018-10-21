@@ -1,0 +1,228 @@
+{
+    "account": [
+        {
+            "CONTAINER": "bank",
+            "id": 11895599,
+            "isAsset": true,
+            "balances": [
+                {
+                    "date": "2018-10-21",
+                    "balance": {
+                        "amount": 2056.32,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-10-22",
+                    "balance": {
+                        "amount": 2056.32,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-10-23",
+                    "balance": {
+                        "amount": 1885.2,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-10-24",
+                    "balance": {
+                        "amount": 1824.87,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-10-25",
+                    "balance": {
+                        "amount": 1824.87,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-10-26",
+                    "balance": {
+                        "amount": 1824.87,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-10-27",
+                    "balance": {
+                        "amount": 1824.87,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-10-28",
+                    "balance": {
+                        "amount": 1824.87,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-10-29",
+                    "balance": {
+                        "amount": 1681.1,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-10-30",
+                    "balance": {
+                        "amount": 1681.1,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-10-31",
+                    "balance": {
+                        "amount": 4681.1,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-01",
+                    "balance": {
+                        "amount": 4681.1,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-02",
+                    "balance": {
+                        "amount": 4681.1,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-03",
+                    "balance": {
+                        "amount": 4681.1,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-04",
+                    "balance": {
+                        "amount": 4681.1,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-05",
+                    "balance": {
+                        "amount": 4624.94,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-06",
+                    "balance": {
+                        "amount": 4574.86,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-07",
+                    "balance": {
+                        "amount": 4574.86,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-08",
+                    "balance": {
+                        "amount": 4574.86,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-09",
+                    "balance": {
+                        "amount": 4081.34,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-10",
+                    "balance": {
+                        "amount": 4081.34,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-11",
+                    "balance": {
+                        "amount": 4081.34,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-12",
+                    "balance": {
+                        "amount": 3984.37,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-13",
+                    "balance": {
+                        "amount": 3922.57,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-14",
+                    "balance": {
+                        "amount": 2346.19,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-15",
+                    "balance": {
+                        "amount": 5346.19,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-16",
+                    "balance": {
+                        "amount": 5313.78,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-17",
+                    "balance": {
+                        "amount": 5313.78,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-18",
+                    "balance": {
+                        "amount": 5313.78,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-19",
+                    "balance": {
+                        "amount": 5313.78,
+                        "currency": "USD"
+                    }
+                },
+                {
+                    "date": "2018-11-20",
+                    "balance": {
+                        "amount": 5313.78,
+                        "currency": "USD"
+                    }
+                }
+            ]
+        }
+    ]
+}
