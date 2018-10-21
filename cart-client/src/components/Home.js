@@ -16,7 +16,7 @@ class Home extends Component {
                     <Col md={2} xsHidden></Col>
                     <Col md={4} xs={12}>
                         <div className="home-lottie-image">
-                            <LottieControl animationData={animationData} />
+                            <LottieControl animationData={animationData} height={400} width={400}/>
 </div>
                     </Col>
                     <Col md={6} xs={12}>
