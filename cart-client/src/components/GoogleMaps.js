@@ -38,7 +38,8 @@ class SimpleMap extends Component {
           bootstrapURLKeys={{ key: "AIzaSyAiFR99z-npUDYJE_w0MJGKO5Z5fkhi3Yc" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
-          onChildClick={this._onChildClick}
+          // heatmapLibrary={true}
+          // heatmap={mockData}
         >
 
         {itemMarkers.map((marker, i) => <Markers id={marker.id} lat = {marker.lat} lng = {marker.lng} /> )}

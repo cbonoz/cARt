@@ -9,7 +9,6 @@ import { NotificationContainer, NotificationManager } from 'react-notifications'
 import "./App.css";
 import 'react-notifications/lib/notifications.css';
 import ConsumerView from "./components/ConsumerView";
-// import MerchantView from "./components/MerchantView";
 import GoogleMaps from "./components/GoogleMaps";
 
 import Chartkick from "chartkick";
@@ -52,7 +51,6 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Home} />
             <Route path="/shop" component={ConsumerView} />
-            {/* <Route path="/map" component={GoogleMapsj} /> */}
             <Route path="/map" component={GoogleMaps} />
           </div>
           <NotificationContainer />
