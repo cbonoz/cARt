@@ -34,7 +34,7 @@ class App extends Component {
                   </Nav>
                   <Nav pullRight>
                     <NavItem eventKey={1} href="/shop">
-                      Shop
+                      Your History
                     </NavItem>
                     <NavItem eventKey={2} href="/merchants">
                       Merchants
@@ -48,7 +48,6 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/shop" component={ConsumerView} />
             <Route path="/merchants" component={MerchantView} />
-            {/* <Route path="/report" component={ReportForm} /> */}
           </div>
           <NotificationContainer />
         </div>

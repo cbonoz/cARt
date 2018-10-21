@@ -2,7 +2,7 @@ from flask import Flask, jsonify, request
 from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 from flask_pushjack import FlaskAPNS
-from sqlalchemy.dialects.postgresql import JSON
+# from sqlalchemy.dialects.postgresql import JSON
 
 from cart import Cart
 # from notification import NotificationService, DEV_CERT_FILE, KEY_FILE, PROD_CERT_FILE
@@ -16,41 +16,41 @@ import os
 import json
 import time
 
+APP_PORT = 9001
+
 from flask_socketio import SocketIO, emit
     
 app = Flask(__name__)
-
+"""
 config = {
     'APNS_CERTIFICATE': DEV_CERT_FILE
 }
-
+app.config.update(config)
 DB_USER = os.environ['CART_DB_USER']
 DB_PASS = os.environ['CART_DB_PASS']
 
 DB_HOST = "localhost"
 PORT = '5432'
-APP_PORT = 9001
 
 DB_STRING = "postgres://%s:%s@%s:%s/cart" % (DB_USER, DB_PASS, DB_HOST, PORT)
 print('db', DB_STRING)
 
-app = Flask(__name__)
-app.config.update(config)
-# app.config.from_object(os.environ['APP_SETTINGS'])
+app.config.from_object(os.environ['APP_SETTINGS'])
 app.config['SQLALCHEMY_DATABASE_URI'] = DB_STRING
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SECRET_KEY'] = 'secret!'
+db = SQLAlchemy(app)
+db.create_all()
+"""
 
-apns_client = FlaskAPNS()
-apns_client.init_app(app)
+
+# apns_client = FlaskAPNS()
+# apns_client.init_app(app)
 
 CORS(app)
 
-db = SQLAlchemy(app)
-
-db.create_all()
 cart = Cart()
-ns = NotificationService()
+# ns = NotificationService()
 
 socketio = SocketIO(app)
 
@@ -60,48 +60,41 @@ socketio = SocketIO(app)
 def hello():
     return "Hello World!"
 
-@app.route('/buy', methods=['POST'])
-def buy():
-    try:
-        body = request.get_json()
-    except Exception as e:
-        return jsonify({'error': e})
-
 @app.route('/future', methods=['GET'])
 def future():
     with open(cart.get_data_file('future_balance.json'), 'r') as f:
-        content = f.read()
+        content = json.loads(f.read())
         return jsonify(content)
 
 @app.route('/summary', methods=['GET'])
 def summary():
     with open(cart.get_data_file('summary.json'), 'r') as f:
-        content = f.read()
+        content = json.loads(f.read())
         return jsonify(content)
 
 @app.route('/recurring', methods=['GET'])
 def recurring():
     with open(cart.get_data_file('recurring.json'), 'r') as f:
-        content = f.read()
+        content = json.loads(f.read())
         return jsonify(content)
 
-@app.route('/item', methods=['POST'])
-def record():
+@app.route('/buy', methods=['POST'])
+def buy():
     try:
         body = request.get_json()
         cart.record_item(body)
+        emit('purchase', body)
         return jsonify({'success': True})
     except Exception as e:
         return jsonify({'error': e})        
 
 @app.route('/items', methods=['GET'])
-def record():
+def items():
     try:
         items = cart.get_items()
         return jsonify(items)
     except Exception as e:
         return jsonify({'error': e})        
-
 
 @app.route('/oktospend', methods=['POST'])
 def ok_to_spend():
@@ -128,14 +121,22 @@ def ok_to_spend():
         data = body['data']
         return jsonify({})
     except Exception as e:
-        return jsonify{{'error': e})
+        return jsonify({'error': e})
+
+@app.route('/purchase', methods=['GET'])
+def record():
+    try:
+        items = cart.get_items()
+        return jsonify(items)
+    except Exception as e:
+        return jsonify({'error': e})   
 
 @socketio.on('purchase')
 def test_message(message):
     emit('my response', {'data': 'got it!'})
 
 if __name__ == '__main__':
-    # app.run(port=APP_PORT)
-    socketio.run(app, port=APP_PORT)
+    # socketio.run(app, port=APP_PORT)
+    app.run(port=APP_PORT)
 
     print('App running on port %s' % APP_PORT)
