@@ -8,8 +8,8 @@ export default class Markers extends Component {
         return (
             < LottieControl
             animationData = { animationData }
-            height = { 20 }
-            width = { 20 }
+            height = { 30 }
+            width = { 30 }
             />
         )
     }
