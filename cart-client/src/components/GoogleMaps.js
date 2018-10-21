@@ -1,13 +1,18 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Markers from './Markers';
-
 import { getItems } from '../helper/api'
+import { Modal, Popover, OverlayTrigger, Button, Tooltip} from 'react-bootstrap';
 
 class SimpleMap extends Component {
-
-  state = {
-    itemMarkers: []
+  constructor(props, context) {
+    super(props, context);
+    this.handleShow = this.handleShow.bind(this);
+    this.handleClose = this.handleClose.bind(this);
+    this.state = {
+      itemMarkers: [],
+      show: false
+    }
   }
 
   static defaultProps = {
@@ -17,6 +22,21 @@ class SimpleMap extends Component {
     },
     zoom: 12
   };
+
+  handleClose() {
+    this.setState({
+      show: false
+    });
+  }
+
+  handleShow(key) {
+    console.log(Math.random() *100 + 20)
+    this.state.itemMarkers[key].dwellTime = Math.floor(Math.random() * 100 + 20)
+    this.setState({
+      show: true,
+      chosenItem: this.state.itemMarkers[key]
+    });
+  }
 
   componentDidMount() {
     const self = this
@@ -29,7 +49,7 @@ class SimpleMap extends Component {
   }
 
   render() {
-    const { itemMarkers } = this.state
+    const { itemMarkers, show, chosenItem } = this.state
 
     return (
       // Important! Always set the container height explicitly
@@ -38,8 +58,9 @@ class SimpleMap extends Component {
           bootstrapURLKeys={{ key: "AIzaSyAiFR99z-npUDYJE_w0MJGKO5Z5fkhi3Yc" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
-        // heatmapLibrary={true}
-        // heatmap={mockData}
+          heatmapLibrary={true}
+          heatmap={this.state.itemMarkers}
+          onChildClick={this.handleShow}
         >
 
           {itemMarkers.map((marker, i) => <Markers
@@ -48,6 +69,26 @@ class SimpleMap extends Component {
             lat={marker.lat}
             lng={marker.lng} />)}
         </GoogleMapReact>
+        <Modal show={this.state.show} onHide={this.handleClose}>
+          <Modal.Header closeButton>
+            <Modal.Title>Item Sale</Modal.Title>
+          </Modal.Header>
+          <Modal.Body>
+            <h6>Item: {chosenItem && chosenItem.name}</h6>
+            <p>
+              Price: ${chosenItem && chosenItem.price}
+            </p>
+            <p>
+              Address: {chosenItem && chosenItem.address}
+            </p>
+            <p>
+              Seconds user looked at product: {chosenItem && chosenItem.dwellTime}
+            </p>
+          </Modal.Body>
+          <Modal.Footer>
+            <Button onClick={this.handleClose}>Close</Button>
+          </Modal.Footer>
+        </Modal>
       </div>
     );
   }
