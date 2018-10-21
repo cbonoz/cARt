@@ -1,23 +1,22 @@
 from flask import Flask, jsonify, request
-from flask_sqlalchemy import SQLAlchemy
+# from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
-from flask_pushjack import FlaskAPNS
+# from flask_pushjack import FlaskAPNS
 # from sqlalchemy.dialects.postgresql import JSON
 
 from cart import Cart
 # from notification import NotificationService, DEV_CERT_FILE, KEY_FILE, PROD_CERT_FILE
 
 # colorama color terminal printing
-from colorama import Fore, Back, Style
-from colorama import init
-init()
+# from colorama import Fore, Back, Style
+# from colorama import init
+# init()
 
 import os
 import json
 import time
 
-
-from flask_socketio import SocketIO, emit
+# from flask_socketio import SocketIO, emit
     
 app = Flask(__name__)
 """
@@ -48,11 +47,12 @@ db.create_all()
 
 CORS(app)
 
-cart = Cart(port = 9001)
+cart = Cart(port = 9002)
 APP_PORT = cart.port
 # ns = NotificationService()
 
-socketio = SocketIO(app)
+
+# socketio = SocketIO(app)
 
 ### Begin Endpoints
 
@@ -131,9 +131,9 @@ def record():
     except Exception as e:
         return jsonify({'error': e})   
 
-@socketio.on('purchase')
-def test_message(message):
-    emit('my response', {'data': 'got it!'})
+# @socketio.on('purchase')
+# def test_message(message):
+#     emit('my response', {'data': 'got it!'})
 
 if __name__ == '__main__':
     # socketio.run(app, port=APP_PORT)
