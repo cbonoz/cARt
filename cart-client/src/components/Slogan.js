@@ -16,7 +16,7 @@ class Slogan extends Component {
                     Bringing eCommerce to the uneCommerced for&nbsp;<br />
                     <span>
                         <ReactRotatingText items={items} />
-                    </span>
+                    </span>.
                 </p>
             </div>
         );
