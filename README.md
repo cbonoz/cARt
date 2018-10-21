@@ -26,6 +26,12 @@ latest ngrok: https://cb58a6af.ngrok.io
 
     GET /oktospend/{AMOUNT}
     - gets whether it's ok for the user to spend {AMOUNT} in the next 30 days.
+        if ok, returns {'ok': true}
+        if not ok, returns {
+            "balance": -943.6799999999998,
+            "ok": false,
+            "predicted_negative_balance_date": "2018-10-21"
+        }
 </pre>
 
 
