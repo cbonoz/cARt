@@ -30,7 +30,7 @@ class Home extends Component {
                         </h1>
                         <Slogan />
                         <div className='home-main-buttons'>
-                            <a href="/consumer">
+                            <a href="/shop">
                                 <Button
                                     className='report-button'
                                     bsStyle="info"
