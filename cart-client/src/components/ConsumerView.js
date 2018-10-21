@@ -1,6 +1,6 @@
 
 import React, { Component } from 'react';
-import { ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap'
+import { ListGroup, Button, ListGroupItem, Row, Col } from 'react-bootstrap'
 import { getItems, getFuture } from './../helper/api'
 import ReactChartkick, { LineChart, AreaChart, PieChart } from 'react-chartkick'
 import animationData from './lottie/success.json'
@@ -79,10 +79,15 @@ class ConsumerView extends Component {
         const { showItems, itemData, items, currentItem, hasNegative, currentIndex } = this.state
 
         const chartColor = hasNegative ? "#ff0000" : "#00ff00"
+        const buyStyle = hasNegative ? "warning" : "success"
 
         return (
             <div>
-            {!showItems &&   <LottieControl runOnce={true} animationData={animationData} height={400} width={400}/>}
+            {!showItems &&  <div className='centered'>
+                <h2>Loading your Product History</h2>
+                <LottieControl runOnce={true} animationData={animationData} height={400} width={400}/>
+            </div>
+                }
             {showItems && <div className='consumer-view'>
 
                 <Row>
@@ -106,7 +111,7 @@ class ConsumerView extends Component {
 
                     <Col xs={12} md={9}>
                         {currentItem && <div>
-                            <ListGroupItem header={"Your future balance after buying " + currentItem.name}/>
+                            <ListGroupItem header={"Your account after buying " + currentItem.name}>One month simulation</ListGroupItem>
                             <ListGroupItem>
                             <div className='chart-area'>
                                 {itemData && <AreaChart
@@ -117,6 +122,12 @@ class ConsumerView extends Component {
                                     data={itemData}
                                     width="800px"
                                     height="600px" />}
+                            </div>
+
+                            <div>
+                                {hasNegative && <Button className="chart-button" bsSize="large" bsStyle="danger">Request Money</Button>}
+                                {!hasNegative && <Button className="chart-button" bsSize="large" bsStyle="success">Buy</Button>}
+                                <Button className="chart-button" bsSize="large" bsStyle="info">Lookup Product</Button>
                             </div>
 </ListGroupItem>
                         </div>}

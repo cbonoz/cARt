@@ -1,9 +1,11 @@
 import React, { Component } from 'react';
 import Slogan from './Slogan';
-import { Button, Grid, Col, Row } from 'react-bootstrap'
-import animationData from './lottie/man_pay.json'
+import { Button, Col, Row } from 'react-bootstrap'
 
-import logo from '../assets/cart_horizontal.png'
+import animationData from './lottie/man_confused.json'
+import cartData from './lottie/cart.json'
+
+import logo from '../assets/cart_logo_trans.png'
 import LottieControl from './LottieControl';
 
 class Home extends Component {
@@ -16,13 +18,16 @@ class Home extends Component {
                     <Col md={2} xsHidden></Col>
                     <Col md={4} xs={12}>
                         <div className="home-lottie-image">
-                            <LottieControl animationData={animationData} height={400} width={400}/>
-</div>
+                            {/* <GeoChart data={[["United States", 44], ["Germany", 23], ["Brazil", 22]]} /> */}
+                            <LottieControl animationData={animationData} height={400} width={400} />
+                        </div>
                     </Col>
                     <Col md={6} xs={12}>
-
-                        {/* <img src={logo}/> */}
-                        <h1 className='home-header-text'>cARt</h1>
+                        <div className="home-col-right">
+                        {/* <img src={logo} className='header-cart-image' /> */}
+                        <h1 className='home-header-text'>cARt
+                            {/* <LottieControl animationData={cartData} height={400} width={400} /> */}
+                        </h1>
                         <Slogan />
                         <div className='home-main-buttons'>
                             <a href="/consumers">
@@ -42,6 +47,7 @@ class Home extends Component {
                                     Merchants
                     </Button>
                             </a>
+</div>
                         </div>
                     </Col>
 
