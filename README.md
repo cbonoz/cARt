@@ -24,7 +24,7 @@ latest ngrok: https://cb58a6af.ngrok.io
     GET /items
     - returns the current set of viewed items
 
-    GET /oktospend/{AMOUNT}>
+    GET /oktospend/{AMOUNT}
     - gets whether it's ok for the user to spend {AMOUNT} in the next 30 days.
 </pre>
 
