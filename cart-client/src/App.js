@@ -10,6 +10,7 @@ import "./App.css";
 import 'react-notifications/lib/notifications.css';
 import ConsumerView from "./components/ConsumerView";
 import MerchantView from "./components/MerchantView";
+import GoogleMaps from "./components/GoogleMaps";
 
 
 class App extends Component {
@@ -48,6 +49,7 @@ class App extends Component {
             <Route exact path="/" component={Home} />
             <Route path="/shop" component={ConsumerView} />
             <Route path="/merchants" component={MerchantView} />
+            <Route path="/map" component={GoogleMaps} />
           </div>
           <NotificationContainer />
         </div>
