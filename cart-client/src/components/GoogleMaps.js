@@ -1,38 +1,36 @@
 import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Markers from './Markers';
-// const AnyReactComponent = ({ text }) => (
-//   <div>
-//     {text}
-//   </div>
-// );
-  const mockData = [
-  {
-    id: '1',
-    lat: "36.1216611",
-    lng: "-115.1679618"
-  },
-  {
-    id: '2',
-    lat: "36.1175",
-    lng: "-115.1882"
-  }
-]
 
+import { getItems } from '../helper/api'
 
 class SimpleMap extends Component {
+
+  state = {
+    itemMarkers: []
+  }
+
   static defaultProps = {
     center: {
       lat: 36.1216611,
       lng: -115.1679618
     },
-    zoom: 11
+    zoom: 12
   };
-  componentDidMount() {
 
+  componentDidMount() {
+    const self = this
+    getItems().then(res => {
+      const itemMarkers = res.data
+      self.setState( {
+        itemMarkers
+      })
+    })
   }
 
   render() {
+    const { itemMarkers } = this.state
+
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
@@ -43,7 +41,7 @@ class SimpleMap extends Component {
           onChildClick={this._onChildClick}
         >
 
-        {mockData.map((marker,index) => <Markers id={marker.id} lat = {marker.lat} lng = {marker.lng} /> )}
+        {itemMarkers.map((marker, i) => <Markers id={marker.id} lat = {marker.lat} lng = {marker.lng} /> )}
         </GoogleMapReact>
       </div>
     );
