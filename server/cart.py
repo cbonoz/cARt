@@ -5,6 +5,8 @@ DATA_DIR = "./data"
 from tinydb import TinyDB, Query
 import paypalrestsdk
 from paypalrestsdk import Payment
+from faker import Faker
+fake = Faker()
 
 import logging
 import uuid
@@ -57,6 +59,11 @@ class Cart:
         return os.path.join(DATA_DIR, filename)
 
     def record_item(self, item, payment=True):
+        if 'user' not in item:
+            item['user'] = fake.name()
+
+        if 'converted' not in item:
+            item['converted'] = random.choice([True, False])
         res = False
         if payment:
             res = self.create_payment(item, 1)

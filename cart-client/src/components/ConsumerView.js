@@ -87,7 +87,7 @@ class ConsumerView extends Component {
         return (
             <div>
             {!showItems &&  <div className='centered'>
-                <h2>Loading your Product History</h2>
+                <h2>Loading your Product Discoveries</h2>
                 <LottieControl runOnce={true} animationData={animationData} height={400} width={400}/>
             </div>
                 }
@@ -97,7 +97,7 @@ class ConsumerView extends Component {
 
                     <Col xs={12} md={3}>
                         <ListGroup>
-                            <ListGroupItem header="Your Recent Items" bsStyle='info'/>
+                            <ListGroupItem header="Your Discoveries" bsStyle='info'/>
                             <ListGroupItem>
                             {items === null || (items.length === 0) && <h3>No recent items Recorded,<br/>Why not go out and explore?</h3>}
                             {items && items.map((item, i) => {

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GoogleMapReact from 'google-map-react';
 import Markers from './Markers';
 import { getItems } from '../helper/api'
-import { Modal, Popover, OverlayTrigger, Button, Tooltip} from 'react-bootstrap';
+import { Modal, Popover, OverlayTrigger, Button, ListGroup, ListGroupItem, Tooltip} from 'react-bootstrap';
 
 class SimpleMap extends Component {
   constructor(props, context) {
@@ -54,6 +54,7 @@ class SimpleMap extends Component {
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
+        <ListGroupItem header="Impressions"/>
         <GoogleMapReact
           bootstrapURLKeys={{ key: "AIzaSyAiFR99z-npUDYJE_w0MJGKO5Z5fkhi3Yc" }}
           defaultCenter={this.props.center}
@@ -82,13 +83,20 @@ class SimpleMap extends Component {
               Address: {chosenItem && chosenItem.address}
             </p>
             <p>
-              Seconds user looked at product: {chosenItem && chosenItem.dwellTime}
+              Seconds Engaged: {chosenItem && chosenItem.dwellTime}
+            </p>
+
+
+            <p>
+              Converted: {chosenItem.converted ? "Yes" : "No"}
             </p>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={this.handleClose}>Close</Button>
+            <Button bsStyle="info" onClick={this.viewAnalytics}>View Analytics</Button>
+            <Button bsStyle="warning" onClick={this.handleClose}>Close</Button>
           </Modal.Footer>
         </Modal>
+
       </div>
     );
   }

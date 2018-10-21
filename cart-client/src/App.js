@@ -38,10 +38,10 @@ class App extends Component {
                   </Nav>
                   <Nav pullRight>
                     <NavItem eventKey={1} href="/shop">
-                      Your History
+                      Discoveries
                     </NavItem>
                     <NavItem eventKey={2} href="/merchants">
-                      Map View
+                      For&nbsp;Merchants
                     </NavItem>
                   </Nav>
                 </Navbar.Collapse>

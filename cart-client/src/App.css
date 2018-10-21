@@ -4,7 +4,8 @@
 .App-logo.navbar-brand {
   /* animation: App-logo-spin infinite 20s linear; */
   /* height: 40px; */
-  padding: 4px !important;
+  padding-top: 6px !important;
+  padding-bottom: 10px !important;
 }
 
 /* .App-header {

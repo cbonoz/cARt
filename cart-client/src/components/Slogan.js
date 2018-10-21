@@ -13,8 +13,7 @@ class Slogan extends Component {
         return (
             <div className='slogan-text'>
                 <p>
-                    AR-powered product discovery designed for &nbsp;
-                    &nbsp;<br />
+                    An AR-powered product discovery platform <br/> designed for&nbsp;
                     <span>
                         <ReactRotatingText items={items} />
                     </span>.

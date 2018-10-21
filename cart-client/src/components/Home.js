@@ -30,12 +30,12 @@ class Home extends Component {
                         </h1>
                         <Slogan />
                         <div className='home-main-buttons'>
-                            <a href="/consumers">
+                            <a href="/consumer">
                                 <Button
                                     className='report-button'
                                     bsStyle="info"
                                     bsSize="large">
-                                    Consumers
+                                    View your history
                     </Button>
                             </a>
                             &nbsp;

@@ -1,6 +1,6 @@
+import random
 from cart import Cart
 from faker import Faker
-import random
 fake = Faker()
 
 PRICES = [
