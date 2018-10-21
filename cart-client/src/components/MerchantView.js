@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Map from './Map'
 
-class MapView extends Component {
+class MerchantView extends Component {
     render() {
         return (
             <div>
@@ -11,4 +11,4 @@ class MapView extends Component {
     }
 }
 
-export default MapView;
+export default MerchantView;

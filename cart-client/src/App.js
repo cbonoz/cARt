@@ -8,7 +8,8 @@ import {NotificationContainer, NotificationManager} from 'react-notifications';
 
 import "./App.css";
 import 'react-notifications/lib/notifications.css';
-import MapView from "./components/MapView";
+import ConsumerView from "./components/ConsumerView";
+import MerchantView from "./components/MerchantView";
 
 
 class App extends Component {
@@ -32,8 +33,11 @@ class App extends Component {
       </NavItem>
       </Nav>
     <Nav pullRight>
-      <NavItem eventKey={1} href="/map">
-        Map
+      <NavItem eventKey={1} href="/shop">
+        Shop
+      </NavItem>
+      <NavItem eventKey={2} href="/merchants">
+        Merchants
       </NavItem>
     </Nav>
   </Navbar.Collapse>
@@ -42,7 +46,8 @@ class App extends Component {
           </header>
           <div>
             <Route exact path="/" component={Home} />
-            <Route path="/map" component={MapView} />
+            <Route path="/shop" component={ConsumerView} />
+            <Route path="/merchants" component={MerchantView} />
             {/* <Route path="/report" component={ReportForm} /> */}
           </div>
           <NotificationContainer/>

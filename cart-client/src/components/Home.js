@@ -25,7 +25,7 @@ class Home extends Component {
                         <h1 className='home-header-text'>cARt</h1>
                         <Slogan />
                         <div className='home-main-buttons'>
-                            <a href="/search">
+                            <a href="/consumers">
                                 <Button
                                     className='report-button'
                                     bsStyle="info"
@@ -34,7 +34,7 @@ class Home extends Component {
                     </Button>
                             </a>
                             &nbsp;
-                <a href="/report">
+                <a href="/merchants">
                                 <Button
                                     className='report-button'
                                     bsStyle="info"
