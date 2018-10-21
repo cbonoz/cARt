@@ -119,7 +119,7 @@ class ConsumerView extends Component {
                             <div className='chart-area'>
                                 {/* <p>{currentItem.name}</p> */}
                                 {itemData && <AreaChart
-                                    label="Predicted Balance"
+                                    label="Predicted Account Balance"
                                     colors={[chartColor]}
                                     prefix="$"
                                     legend={true}
@@ -129,6 +129,10 @@ class ConsumerView extends Component {
                             </div>
 
                             <div>
+                            <br/>
+                                {hasNegative && <p className="ok-text" >You're <b>not ok</b> to buy this item based on your balance projection for the next month.</p>}
+                                {!hasNegative && <p className="ok-text" >You're <b>ok</b> to buy this item based on your balance projection for the next month.</p>}
+
                                 {hasNegative && <Button className="chart-button" bsSize="large" bsStyle="danger">Request Money</Button>}
                                 {!hasNegative && <Button className="chart-button" bsSize="large" bsStyle="success">Buy</Button>}
                                 <Button className="chart-button" bsSize="large" bsStyle="info">Lookup Product</Button>
