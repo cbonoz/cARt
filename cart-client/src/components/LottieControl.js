@@ -2,7 +2,7 @@ import React from 'react'
 import Lottie from 'react-lottie';
 import * as animationData from './lottie/man_pay.json'
 // Example <LottieControl animationData={animationData}/>
-
+console.log('animaiton Data', animationData)
 export default class LottieControl extends React.Component {
 
   constructor(props) {
@@ -20,7 +20,7 @@ export default class LottieControl extends React.Component {
 
     const defaultOptions = {
       loop: true,
-      autoplay: true, 
+      autoplay: true,
       animationData: animationData,
       rendererSettings: {
         preserveAspectRatio: 'xMidYMid slice'
