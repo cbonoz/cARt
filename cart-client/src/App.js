@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import logo from "./assets/cart_horizontal.png";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import {Nav, Navbar, NavItem} from 'react-bootstrap'
+import { Nav, Navbar, NavItem } from 'react-bootstrap'
 
 import Home from "./components/Home";
-import {NotificationContainer, NotificationManager} from 'react-notifications';
+import { NotificationContainer, NotificationManager } from 'react-notifications';
 
 import "./App.css";
 import 'react-notifications/lib/notifications.css';
@@ -19,29 +19,29 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <div className="nav-area">
-            <Navbar collapseOnSelect>
-  <Navbar.Header>
-    <Navbar.Brand>
-        <img src={logo} className="App-logo" alt="logo" href="/"/>
-    </Navbar.Brand>
-    <Navbar.Toggle />
-  </Navbar.Header>
-  <Navbar.Collapse>
-    <Nav>
-      <NavItem eventKey={0} href="/">
-        Home
-      </NavItem>
-      </Nav>
-    <Nav pullRight>
-      <NavItem eventKey={1} href="/shop">
-        Shop
-      </NavItem>
-      <NavItem eventKey={2} href="/merchants">
-        Merchants
-      </NavItem>
-    </Nav>
-  </Navbar.Collapse>
-</Navbar>
+              <Navbar collapseOnSelect>
+                <Navbar.Header>
+                  <Navbar.Brand>
+                    <img src={logo} className="App-logo" alt="logo" href="/" />
+                  </Navbar.Brand>
+                  <Navbar.Toggle />
+                </Navbar.Header>
+                <Navbar.Collapse>
+                  <Nav>
+                    <NavItem eventKey={0} href="/">
+                      Home
+                    </NavItem>
+                  </Nav>
+                  <Nav pullRight>
+                    <NavItem eventKey={1} href="/shop">
+                      Shop
+                    </NavItem>
+                    <NavItem eventKey={2} href="/merchants">
+                      Merchants
+                    </NavItem>
+                  </Nav>
+                </Navbar.Collapse>
+              </Navbar>
             </div>
           </header>
           <div>
@@ -50,7 +50,7 @@ class App extends Component {
             <Route path="/merchants" component={MerchantView} />
             {/* <Route path="/report" component={ReportForm} /> */}
           </div>
-          <NotificationContainer/>
+          <NotificationContainer />
         </div>
       </Router>
     );

@@ -8,6 +8,7 @@
     "prop-types": "^15.6.2",
     "react": "^16.5.2",
     "react-bootstrap": "^0.32.4",
+    "react-d3-components": "^0.9.1",
     "react-dom": "^16.5.2",
     "react-google-maps": "^9.4.5",
     "react-jsonschema-form": "^1.0.5",

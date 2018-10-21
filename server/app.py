@@ -65,7 +65,42 @@ def buy():
     try:
         body = request.get_json()
     except Exception as e:
-        return jsonify{{'error': e})
+        return jsonify({'error': e})
+
+@app.route('/future', methods=['GET'])
+def future():
+    with open(cart.get_data_file('future_balance.json'), 'r') as f:
+        content = f.read()
+        return jsonify(content)
+
+@app.route('/summary', methods=['GET'])
+def summary():
+    with open(cart.get_data_file('summary.json'), 'r') as f:
+        content = f.read()
+        return jsonify(content)
+
+@app.route('/recurring', methods=['GET'])
+def recurring():
+    with open(cart.get_data_file('recurring.json'), 'r') as f:
+        content = f.read()
+        return jsonify(content)
+
+@app.route('/item', methods=['POST'])
+def record():
+    try:
+        body = request.get_json()
+        cart.record_item(body)
+        return jsonify({'success': True})
+    except Exception as e:
+        return jsonify({'error': e})        
+
+@app.route('/items', methods=['GET'])
+def record():
+    try:
+        items = cart.get_items()
+        return jsonify(items)
+    except Exception as e:
+        return jsonify({'error': e})        
 
 
 @app.route('/oktospend', methods=['POST'])
@@ -73,6 +108,21 @@ def ok_to_spend():
     try:
         # body = json.loads(request.data)
         body = request.get_json()
+        amount = float(body['amount'])
+
+        future_data = future()
+        balances = future_data['account']['balances']
+        for balance_data in balances:
+            balance = balance_data['balance']['amount']
+            diff = balance - amount
+            if diff < 0:
+                return jsonify({
+                    'ok': False,
+                    'balance': diff,
+                    'date': balance_data['date']
+                })
+        return jsonify({'ok': True})
+
         # print('request predict', body)
 
         data = body['data']

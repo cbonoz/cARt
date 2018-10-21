@@ -1,0 +1,41 @@
+{
+    "transactionSummary": [
+        {
+            "categoryType": "INCOME",
+            "creditTotal": {
+                "amount": 16096,
+                "currency": "USD"
+            },
+            "links": {
+                "transactions": "/transactions?categoryType=INCOME&fromDate=2018-05-01&toDate=2018-10-31"
+            }
+        },
+        {
+            "categoryType": "EXPENSE",
+            "debitTotal": {
+                "amount": 17528.5,
+                "currency": "USD"
+            },
+            "links": {
+                "transactions": "/transactions?categoryType=EXPENSE&fromDate=2018-05-01&toDate=2018-10-31"
+            }
+        },
+        {
+            "categoryType": "TRANSFER",
+            "creditTotal": {
+                "amount": 500,
+                "currency": "USD"
+            },
+            "debitTotal": {
+                "amount": 6446.04,
+                "currency": "USD"
+            },
+            "links": {
+                "transactions": "/transactions?categoryType=TRANSFER&fromDate=2018-05-01&toDate=2018-10-31"
+            }
+        }
+    ],
+    "links": {
+        "transactions": "/transactions?fromDate=2018-05-01&toDate=2018-10-31"
+    }
+}
