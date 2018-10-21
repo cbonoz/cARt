@@ -27,18 +27,18 @@ class Cart:
             "payer": {
                 "payment_method": "paypal"},
             "redirect_urls": {
-                "return_url": "http://localhost:%s/payment/execute",
+                "return_url": "http://localhost:%s/payment/execute" % self.port,
                 "cancel_url": "http://localhost:3000/"},
             "transactions": [{
                 "item_list": {
                     "items": [{
-                        "name": item.name,
-                        "sku": uuid.uuid4(),
-                        "price": item.price,
+                        "name": item['name'],
+                        "sku": str(uuid.uuid4()),
+                        "price": item['price'],
                         "currency": "USD",
                         "quantity": amount}]},
                 "amount": {
-                    "total": item.price * amount,
+                    "total": item['price'] * amount,
                     "currency": "USD"},
                 "description": "This is the payment transaction description."}]})
         if payment.create():
@@ -47,10 +47,14 @@ class Cart:
             print(payment.error)
         return payment
 
+    def get_payments(self, count = 10):
+        payment_history = Payment.all({"count": count})
+        return payment_history
+
     def get_data_file(self, filename):
         return os.path.join(DATA_DIR, filename)
 
-    def record_item(self, item):
+    def record_item(self, item, payment=True):
         self.create_payment(item, 1)
         self.db.insert(item)
         return True

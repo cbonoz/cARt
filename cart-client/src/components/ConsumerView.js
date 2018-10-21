@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import { ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap'
 import { getItems, getFuture } from './../helper/api'
+import ReactChartkick, { LineChart, PieChart } from 'react-chartkick'
 import cx from 'classnames'
 
 class ConsumerView extends Component {
@@ -13,10 +14,10 @@ class ConsumerView extends Component {
         currentIndex: null
     }
 
-    constructor( props ){
-        super( props );
+    constructor(props) {
+        super(props);
         this.renderItems = this.renderItems.bind(this);
-      }
+    }
 
     renderItems() {
         const self = this
@@ -26,7 +27,7 @@ class ConsumerView extends Component {
             console.log(items)
             const numItems = items.length
             self.setState({ items })
-            self.renderData(currentIndex + 1)
+            self.renderData((currentIndex + 1) % numItems)
         }).catch(err => {
             console.error('error', err)
         })
@@ -39,12 +40,10 @@ class ConsumerView extends Component {
             const itemData = res.data
             const balances = itemData['account'][0]['balances']
             console.log(itemData)
-            const modifiedData = balances.map(entry => {
-                entry['balance']['amount'] = entry['balance']['amount']  - currentItem.price
-                return {
-                    x: entry['date'],
-                    y: parseFloat(parseFloat(entry['balance']['amount']).toFixed(2))
-                }
+            const modifiedData = {}
+            balances.map(entry => {
+                entry['balance']['amount'] = entry['balance']['amount'] - currentItem.price
+                modifiedData[entry['date']] = parseFloat(parseFloat(entry['balance']['amount']).toFixed(2))
             })
             console.log(modifiedData)
             self.setState({ currentIndex, currentItem, itemData: modifiedData })
@@ -61,31 +60,41 @@ class ConsumerView extends Component {
     render() {
         const { itemData, items, currentItem, currentIndex } = this.state
         return (
-            <div>
+            <div className='consumer-view'>
 
                 <Row>
 
                     <Col xs={12} md={3}>
                         <ListGroup>
-                            <h2>Your Recent Items</h2>
+                            <ListGroupItem header="Your Recent Items" bsStyle='info'/>
+                            <ListGroupItem>
                             {!items && <p>No recent items Recorded</p>}
                             {items && items.map((item, i) => {
-                                return <ListGroupItem
-                                className={{cx: {'gray': currentIndex === i, 'list-spacing': true}}}
-                                onClick={() => this.renderData(i)}
-                                 key={i}>
-                                    {item.name}
-                                </ListGroupItem>
+                                const cName = cx({ 'gray': currentIndex === i, 'list-item-row': true })
+                                return <div
+                                    className={cName}
+                                    onClick={() => this.renderData(i)}
+                                    key={i}>
+                                    {item.name}</div>
                             })}
+                            </ListGroupItem>
                         </ListGroup>
                     </Col>
 
                     <Col xs={12} md={9}>
                         {currentItem && <div>
-                            {JSON.stringify(currentItem)}
+                            <ListGroupItem header={currentItem.name + " - Projected Balance"}/>
+                            <ListGroupItem>
                             <div className='chart-area'>
-                                {/* TODO: chart  */}
+                                {itemData && <LineChart
+                                    label="Predicted Balance"
+                                    prefix="$"
+                                    legend={true}
+                                    data={itemData}
+                                    width="800px"
+                                    height="600px" />}
                             </div>
+</ListGroupItem>
                         </div>}
 
                     </Col>

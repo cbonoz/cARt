@@ -22,13 +22,21 @@
   color: #61dafb;
 }
 
-.list-spacing {
-  padding: 5px;
-  margin: 50px;
+.list-item-row {
+  padding-left: 25px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border: 1px solid gray;
+  cursor: pointer;
+  margin: 0px;
 }
 
 .gray {
   background: #ddd;
+}
+
+.consumer-view {
+  padding: 10px;
 }
 
 .header-text-area {
