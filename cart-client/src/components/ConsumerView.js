@@ -97,7 +97,7 @@ class ConsumerView extends Component {
 
                     <Col xs={12} md={3}>
                         <ListGroup>
-                            <ListGroupItem header="Your Discoveries" bsStyle='info'/>
+                        <ListGroupItem header="Your Discoveries" bsStyle='info'>{new Date().toLocaleDateString()}</ListGroupItem>
                             <ListGroupItem>
                             {items === null || (items.length === 0) && <h3>No recent items Recorded,<br/>Why not go out and explore?</h3>}
                             {items && items.map((item, i) => {

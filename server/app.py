@@ -88,6 +88,7 @@ def buy():
         # emit('purchase', body)
         if 'id' in payment:
             resp = payment['id']
+            cart.execute_payment(resp)
         else:
             resp = False
         return jsonify({'ok': True, 'payment': resp})

@@ -8,16 +8,19 @@ from paypalrestsdk import Payment
 from faker import Faker
 fake = Faker()
 
+import random
 import logging
 import uuid
 import os
 
 # https://developer.paypal.com/docs/api/identity/v1/
-
-paypalrestsdk.configure({
+config = {
   "mode": "sandbox", # sandbox or live
   "client_id": os.getenv('PAYPAL_CLIENT_ID') or "EBWKjlELKMYqRNQ6sYvFo64FtaRLRR5BdHEESmha49TM",
-  "client_secret": os.getenv('PAYPAL_CLIENT_SECRET') or "EO422dn3gQLgDbuwqTjzrFgFtaRLRR5BdHEESmha49TM" })
+  "client_secret": os.getenv('PAYPAL_CLIENT_SECRET') or "EO422dn3gQLgDbuwqTjzrFgFtaRLRR5BdHEESmha49TM" }
+
+paypalrestsdk.configure(config)
+print(config)
 
 class Cart:
 
@@ -50,6 +53,17 @@ class Cart:
         else:
             print(payment.error)
         return payment
+
+    def execute_payment(self, payment_id, payer_id='DUFRQ8GWYMJXC'):
+        # ID of the payment. This ID is provided when creating payment.
+        payment = Payment.find(payment_id)
+
+        # PayerID is required to approve the payment.
+        if payment.execute({"payer_id": payer_id}):  # return True or False
+            print("Payment[%s] execute successfully" % (payment.id))
+        else:
+            print(payment.error)
+
 
     def get_payments(self, count = 10):
         payment_history = Payment.all({"count": count}).payments

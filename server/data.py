@@ -3,24 +3,26 @@ from cart import Cart
 from faker import Faker
 fake = Faker()
 
-PRICES = [
+PRICES = list(map(lambda x: x - .01, [
+    25,
+    50,
+    80,
     100,
     250,
     500,
-    1000,
-    5000,
-    10000
-]
+    900,
+]))
 
 ITEMS = [
-    'headband',
-    'bracelet',
-    'shoes',
-    'handbug',
-    'purse'
+    'Headband',
+    'Bracelet',
+    'Shoes',
+    'Handbag',
+    'Purse',
+    'Watch'
 ]
 
-N = 10
+N = 20
 
 cart = Cart()
 locations = []
@@ -37,6 +39,7 @@ for i in range(N):
         'name': fake.company() + " " + random.choice(ITEMS),
         'address': fake.address(),
         'price': random.choice(PRICES),
+        'currency': "USD",
         'lat': lat,
         'lng': lng
     }
