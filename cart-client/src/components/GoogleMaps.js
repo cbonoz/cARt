@@ -88,7 +88,7 @@ class SimpleMap extends Component {
 
 
             <p>
-              Converted: {chosenItem.converted ? "Yes" : "No"}
+              Converted: {chosenItem && chosenItem.converted ? "Yes" : "No"}
             </p>
           </Modal.Body>
           <Modal.Footer>
