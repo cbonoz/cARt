@@ -44,7 +44,6 @@ class SimpleMap extends Component {
 
           {itemMarkers.map((marker, i) => <Markers
             title={marker.name}
-            label="hi"
             id={marker.id}
             lat={marker.lat}
             lng={marker.lng} />)}

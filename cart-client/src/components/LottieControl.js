@@ -11,7 +11,7 @@ export default class LottieControl extends React.Component {
   }
 
   render() {
-    const { animationData, height, width } = this.props
+    const { animationData, height, width, runOnce } = this.props
     const {isPaused, isStopped} = this.state
 
     const buttonStyle = {
@@ -19,8 +19,10 @@ export default class LottieControl extends React.Component {
       margin: '10px auto'
     };
 
+    const loop = runOnce === false || runOnce === undefined
+
     const defaultOptions = {
-      loop: true,
+      loop: loop,
       autoplay: true,
       animationData: animationData,
       rendererSettings: {
