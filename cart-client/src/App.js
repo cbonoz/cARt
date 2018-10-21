@@ -40,8 +40,8 @@ class App extends Component {
                     <NavItem eventKey={1} href="/shop">
                       Your History
                     </NavItem>
-                    <NavItem eventKey={2} href="/map">
-                      Map View 
+                    <NavItem eventKey={2} href="/merchants">
+                      Map View
                     </NavItem>
                   </Nav>
                 </Navbar.Collapse>
@@ -51,7 +51,7 @@ class App extends Component {
           <div>
             <Route exact path="/" component={Home} />
             <Route path="/shop" component={ConsumerView} />
-            <Route path="/map" component={GoogleMaps} />
+            <Route path="/merchants" component={GoogleMaps} />
           </div>
           <NotificationContainer />
         </div>
