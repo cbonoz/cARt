@@ -20,7 +20,7 @@ class Home extends Component {
                         className='report-button'
                         bsStyle="info"
                         bsSize="large">
-                        Search Lessons
+                        Consumers
                     </Button>
                 </a>
                 &nbsp;
@@ -29,7 +29,7 @@ class Home extends Component {
                         className='report-button'
                         bsStyle="info"
                         bsSize="large">
-                        New Report
+                        Merchants
                     </Button>
                 </a>
                 </div>

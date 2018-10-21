@@ -12,6 +12,7 @@ export default class LottieControl extends React.Component {
 
   render() {
     const { animationData } = this.props
+    const {isPaused, isStopped} = this.state
 
     const buttonStyle = {
       display: 'block',
@@ -31,11 +32,11 @@ export default class LottieControl extends React.Component {
       <Lottie options={defaultOptions}
               height={400}
               width={400}
-              isStopped={this.state.isStopped}
-              isPaused={this.state.isPaused}/>
-      <button style={buttonStyle} onClick={() => this.setState({isStopped: true})}>stop</button>
+              isStopped={isStopped}
+              isPaused={isPaused}/>
+      {/* <button style={buttonStyle} onClick={() => this.setState({isStopped: true})}>stop</button>
       <button style={buttonStyle} onClick={() => this.setState({isStopped: false})}>play</button>
-      <button style={buttonStyle} onClick={() => this.setState({isPaused: !this.state.isPaused})}>pause</button>
+      <button style={buttonStyle} onClick={() => this.setState({isPaused: !this.state.isPaused})}>pause</button> */}
     </div>
   }
 }

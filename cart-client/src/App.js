@@ -35,9 +35,6 @@ class App extends Component {
       <NavItem eventKey={1} href="/map">
         Map
       </NavItem>
-      {/* <NavItem eventKey={2} href="/report">
-        New Report
-      </NavItem> */}
     </Nav>
   </Navbar.Collapse>
 </Navbar>
