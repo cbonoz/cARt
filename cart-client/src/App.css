@@ -35,7 +35,6 @@
 
 .home-main-buttons {
   margin-top: 50px;
-  padding: 20px;
 }
 
 .navbar-nav>li>a {
@@ -63,7 +62,12 @@
   background-repeat: no-repeat;
   background-size: cover; 
   min-height: 100vh;
-  text-align: center;
+  padding-top: 80px;
+  /* text-align: center; */
+}
+
+.home-lottie-image {
+  margin-top: 25px;
 }
 
 .nav-area {
@@ -114,9 +118,14 @@
   animation: blinking-cursor 0.8s cubic-bezier(0.68, 0.01, 0.01, 0.99) 0s infinite;
 }
 
+.home-header-text {
+  margin-top: 120px;
+  font-size: 52px;
+}
+
 .slogan-text {
   font-weight: bolder;
-  padding-top: 80px;
+  /* padding-top: 80px; */
   font-size: 24px;
 }
 
