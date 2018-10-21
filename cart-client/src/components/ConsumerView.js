@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import { ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap'
 import { getItems, getFuture } from './../helper/api'
-import ReactChartkick, { LineChart, PieChart } from 'react-chartkick'
+import ReactChartkick, { LineChart, AreaChart, PieChart } from 'react-chartkick'
 import animationData from './lottie/success.json'
 import LottieControl from './LottieControl'
 import cx from 'classnames'
@@ -106,10 +106,10 @@ class ConsumerView extends Component {
 
                     <Col xs={12} md={9}>
                         {currentItem && <div>
-                            <ListGroupItem header={"Project balance after buying " + currentItem.name}/>
+                            <ListGroupItem header={"Your future balance after buying " + currentItem.name}/>
                             <ListGroupItem>
                             <div className='chart-area'>
-                                {itemData && <LineChart
+                                {itemData && <AreaChart
                                     label="Predicted Balance"
                                     colors={[chartColor]}
                                     prefix="$"
