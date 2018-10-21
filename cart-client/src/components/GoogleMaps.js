@@ -51,6 +51,9 @@ class SimpleMap extends Component {
   render() {
     const { itemMarkers, show, chosenItem } = this.state
 
+    const converted = chosenItem && chosenItem.converted
+
+
     return (
       // Important! Always set the container height explicitly
       <div style={{ height: '100vh', width: '100%' }}>
@@ -72,10 +75,11 @@ class SimpleMap extends Component {
         </GoogleMapReact>
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
-            <Modal.Title>Item Sale</Modal.Title>
+            <Modal.Title>Item Impression</Modal.Title>
           </Modal.Header>
           <Modal.Body>
-            <h6>Item: {chosenItem && chosenItem.name}</h6>
+            <h3>Item: {chosenItem && chosenItem.name}</h3>
+            <hr/>
             <p>
               Price: ${chosenItem && chosenItem.price}
             </p>
@@ -83,12 +87,13 @@ class SimpleMap extends Component {
               Address: {chosenItem && chosenItem.address}
             </p>
             <p>
-              Seconds Engaged: {chosenItem && chosenItem.dwellTime}
+              Seconds Engaged: <b>{chosenItem && chosenItem.dwellTime}</b>
             </p>
 
+            <h4>-</h4>
 
             <p>
-              Converted: {chosenItem && chosenItem.converted ? "Yes" : "No"}
+              Converted: <b>{chosenItem && chosenItem.converted ? "Yes" : "No"}</b>
             </p>
           </Modal.Body>
           <Modal.Footer>
