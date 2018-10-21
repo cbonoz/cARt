@@ -2,7 +2,9 @@
 import React, { Component } from 'react';
 import { ListGroup, ListGroupItem, Row, Col } from 'react-bootstrap'
 import { getItems, getFuture } from './../helper/api'
-import ReactChartkick, { LineChart, PieChart } from 'react-chartkick'
+import ReactChartkick, { LineChart, AreaChart, PieChart } from 'react-chartkick'
+import animationData from './lottie/success.json'
+import LottieControl from './LottieControl'
 import cx from 'classnames'
 
 class ConsumerView extends Component {
@@ -11,12 +13,15 @@ class ConsumerView extends Component {
         items: [],
         itemData: [],
         currentItem: null,
-        currentIndex: null
+        currentIndex: null,
+        hasNegative: false,
+        showItems: false
     }
 
     constructor(props) {
         super(props);
         this.renderItems = this.renderItems.bind(this);
+        this.showItems = this.showItems.bind(this);
     }
 
     renderItems() {
@@ -27,7 +32,7 @@ class ConsumerView extends Component {
             console.log(items)
             const numItems = items.length
             self.setState({ items })
-            self.renderData((currentIndex + 1) % numItems)
+            // self.renderData((currentIndex + 1) % numItems)
         }).catch(err => {
             console.error('error', err)
         })
@@ -41,26 +46,44 @@ class ConsumerView extends Component {
             const balances = itemData['account'][0]['balances']
             console.log(itemData)
             const modifiedData = {}
+            let hasNegative = false
             balances.map(entry => {
                 entry['balance']['amount'] = entry['balance']['amount'] - currentItem.price
-                modifiedData[entry['date']] = parseFloat(parseFloat(entry['balance']['amount']).toFixed(2))
+                const newValue = parseFloat(parseFloat(entry['balance']['amount']).toFixed(2))
+                modifiedData[entry['date']] = newValue
+                if (newValue < 0) {
+                    hasNegative = true
+                }
             })
             console.log(modifiedData)
-            self.setState({ currentIndex, currentItem, itemData: modifiedData })
+            self.setState({ currentIndex, hasNegative, currentItem, itemData: modifiedData })
         }).catch(err => {
             console.error('error', err)
         })
     }
 
+    showItems() {
+
+        this.setState( { showItems: true})
+    }
+
     componentDidMount() {
+        setTimeout(this.showItems, 1000)
+
+
         this.renderItems()
         setInterval(this.renderItems, 5000)
     }
 
     render() {
-        const { itemData, items, currentItem, currentIndex } = this.state
+        const { showItems, itemData, items, currentItem, hasNegative, currentIndex } = this.state
+
+        const chartColor = hasNegative ? "#ff0000" : "#00ff00"
+
         return (
-            <div className='consumer-view'>
+            <div>
+            {!showItems &&   <LottieControl runOnce={true} animationData={animationData} height={400} width={400}/>}
+            {showItems && <div className='consumer-view'>
 
                 <Row>
 
@@ -83,11 +106,12 @@ class ConsumerView extends Component {
 
                     <Col xs={12} md={9}>
                         {currentItem && <div>
-                            <ListGroupItem header={currentItem.name + " - Projected Balance"}/>
+                            <ListGroupItem header={"Your future balance after buying " + currentItem.name}/>
                             <ListGroupItem>
                             <div className='chart-area'>
-                                {itemData && <LineChart
+                                {itemData && <AreaChart
                                     label="Predicted Balance"
+                                    colors={[chartColor]}
                                     prefix="$"
                                     legend={true}
                                     data={itemData}
@@ -102,6 +126,7 @@ class ConsumerView extends Component {
                 </Row>
 
 
+            </div>}
             </div>
         );
     }

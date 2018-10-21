@@ -96,49 +96,36 @@ def items():
     except Exception as e:
         return jsonify({'error': e})        
 
-@app.route('/oktospend', methods=['POST'])
-def ok_to_spend():
+@app.route('/oktospend/<amount>', methods=['GET'])
+def ok_to_spend(amount):
     try:
-        # body = json.loads(request.data)
-        body = request.get_json()
-        amount = float(body['amount'])
-
-        future_data = future()
-        balances = future_data['account']['balances']
-        for balance_data in balances:
-            balance = balance_data['balance']['amount']
-            diff = balance - amount
-            if diff < 0:
-                return jsonify({
-                    'ok': False,
-                    'balance': diff,
-                    'date': balance_data['date']
-                })
-        return jsonify({'ok': True})
-
-        # print('request predict', body)
-
-        data = body['data']
-        return jsonify({})
+        amount = float(amount)
+        with open(cart.get_data_file('future_balance.json'), 'r') as f:
+            content = json.loads(f.read())
+            print(content)
+            balances = content['account'][0]['balances']
+            for balance_data in balances:
+                balance = balance_data['balance']['amount']
+                diff = balance - amount
+                if diff < 0:
+                    return jsonify({
+                        'ok': False,
+                        'balance': diff,
+                        'predicted_negative_balance_date': balance_data['date']
+                    })
+            return jsonify({'ok': True})
     except Exception as e:
         return jsonify({'error': e})
 
-@app.route('/payments', methods=['GET'])
-def get_payments():
+@app.route('/payments/<limit>', methods=['GET'])
+def get_payments(limit):
     try:
-        payments = cart.get_payments()
-        return jsonify(payments)
+        limit = int(limit)
+        payments = cart.get_payments(limit)
+        return jsonify({'payments': payments})
     except Exception as e:
         return jsonify({'error': e})   
 
-
-@app.route('/purchase', methods=['GET'])
-def purchase():
-    try:
-        items = cart.get_items()
-        return jsonify(items)
-    except Exception as e:
-        return jsonify({'error': e})   
 
 # @socketio.on('purchase')
 # def test_message(message):

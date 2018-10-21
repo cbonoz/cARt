@@ -22,7 +22,7 @@ class SimpleMap extends Component {
     const self = this
     getItems().then(res => {
       const itemMarkers = res.data
-      self.setState( {
+      self.setState({
         itemMarkers
       })
     })
@@ -38,11 +38,15 @@ class SimpleMap extends Component {
           bootstrapURLKeys={{ key: "AIzaSyAiFR99z-npUDYJE_w0MJGKO5Z5fkhi3Yc" }}
           defaultCenter={this.props.center}
           defaultZoom={this.props.zoom}
-          // heatmapLibrary={true}
-          // heatmap={mockData}
+        // heatmapLibrary={true}
+        // heatmap={mockData}
         >
 
-        {itemMarkers.map((marker, i) => <Markers id={marker.id} lat = {marker.lat} lng = {marker.lng} /> )}
+          {itemMarkers.map((marker, i) => <Markers
+            title={marker.name}
+            id={marker.id}
+            lat={marker.lat}
+            lng={marker.lng} />)}
         </GoogleMapReact>
       </div>
     );

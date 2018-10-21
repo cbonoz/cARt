@@ -4,6 +4,8 @@ DATA_DIR = "./data"
 
 from tinydb import TinyDB, Query
 import paypalrestsdk
+from paypalrestsdk import Payment
+
 import logging
 import uuid
 import os
@@ -48,7 +50,7 @@ class Cart:
         return payment
 
     def get_payments(self, count = 10):
-        payment_history = Payment.all({"count": count})
+        payment_history = Payment.all({"count": count}).payments
         return payment_history
 
     def get_data_file(self, filename):
