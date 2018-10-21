@@ -57,10 +57,11 @@ class Cart:
         return os.path.join(DATA_DIR, filename)
 
     def record_item(self, item, payment=True):
+        res = False
         if payment:
-            self.create_payment(item, 1)
+            res = self.create_payment(item, 1)
         self.db.insert(item)
-        return True
+        return res
 
     def get_items(self):
         return self.db.all()

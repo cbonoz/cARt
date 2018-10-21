@@ -82,11 +82,11 @@ def recurring():
 def buy():
     try:
         body = request.get_json()
-        cart.record_item(body)
+        payment = cart.record_item(body)
         emit('purchase', body)
-        return jsonify({'success': True})
+        return jsonify({'ok': True, 'payment': payment})
     except Exception as e:
-        return jsonify({'error': e})        
+        return jsonify({'error': e, 'ok': False})        
 
 @app.route('/items', methods=['GET'])
 def items():
@@ -115,7 +115,7 @@ def ok_to_spend(amount):
                     })
             return jsonify({'ok': True})
     except Exception as e:
-        return jsonify({'error': e})
+        return jsonify({'error': e, 'ok': False})
 
 @app.route('/payments/<limit>', methods=['GET'])
 def get_payments(limit):
@@ -124,7 +124,7 @@ def get_payments(limit):
         payments = cart.get_payments(limit)
         return jsonify({'payments': payments})
     except Exception as e:
-        return jsonify({'error': e})   
+        return jsonify({'error': e, 'ok': False})   
 
 
 # @socketio.on('purchase')
