@@ -15,6 +15,7 @@ from cart import Cart
 import os
 import json
 import time
+from paypalrestsdk import Payment
 
 # from flask_socketio import SocketIO, emit
     
@@ -82,9 +83,14 @@ def recurring():
 def buy():
     try:
         body = request.get_json()
-        payment = cart.record_item(body)
-        emit('purchase', body)
-        return jsonify({'ok': True, 'payment': payment})
+        payment = cart.record_item(body, True)
+        print(payment)
+        # emit('purchase', body)
+        if 'id' in payment:
+            resp = payment['id']
+        else:
+            resp = False
+        return jsonify({'ok': True, 'payment': resp})
     except Exception as e:
         return jsonify({'error': e, 'ok': False})        
 
